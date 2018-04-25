@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  padding:0;
+}
+
+canvas[resize] {
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+  margin:0;
+  padding:0;
+  position: fixed;
+}
+
+.links {
+  position:relative;
+  z-index:10;
+  display: block;
+  margin: 2%;
+}
+
+a {
+  color: #00c3ff;
+  text-decoration: none;
+  font-size: 6em;
+  font-family: 'Josefin Sans', sans-serif;
+}
+a:hover {
+  color: #ff4800;
+  text-decoration: line-through;
+}
+/* #ffd800 */
