@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: absolute;
+  background-color: white;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  padding:0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+canvas[resize] {
+  width: 100vw;
+  height: 100vh;
+  z-index:-1;
+  margin:0;
+  padding:0;
+  position: absolute;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.top-left-anchor {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 6vmin;
+  font-weight: bold;
+}
+
+.top-right-anchor {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 6vmin;
+  font-weight: bold;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+}
+.bottom-left h1 {
+  font-size: 3vmin;
+  padding: 0;
+  margin: 0;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+}
+.bottom-right a {
+  display: block;
+  text-align: right;
+  font-size: 3vmin;
+  padding: 0;
+  margin: 0;
+}
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2%;
+  height: 100vh;
+}
+
+.links a {
+  font-size: 3vmin;
+  color: #C3CED0;
+  line-height: 1.2em;
+}
+
+.links a:hover {
+  color: #FFEA59;
+  text-decoration: line-through;
+}
+
+
+/* canvas background */
+.bg-grey {
+  background-color: #C3CED0;
+}
+.bg-darkblue {
+  background-color: #1C346C;
+}
+.bg-lightblue {
+  background-color: #01ABE9;
+}
+.bg-red {
+  background-color: #F54B1A;
+}
+.bg-beige {
+  background-color: #E5C39F;
+}
+.bg-yellow {
+  background-color: #FFEA59;
+}

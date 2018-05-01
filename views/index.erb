@@ -1,0 +1,77 @@
+<script type="text/javascript" src="/javascripts/paper-full.js"></script>
+<script type="text/paperscript" canvas="canvas">
+
+      var points = 20;
+      var length = 55;
+      var bgColors = ["bg-grey", "bg-darkblue", "bg-lightblue", "bg-red","bg-beige", "bg-yellow"];
+      var stroke = ['#1C346C', '#01ABE9', '#F54B1A', '#E5C39F', '#FFEA59', '#C3CED0'];
+      var current = 0;
+      var body = document.querySelector('body');
+
+      function changeColors() {
+        // body.classList.remove(bgColors[current]);
+        current = current + 1;
+        if (current === 6) {
+          current = 0;
+        }
+        // body.classList.add(bgColors[current]);
+        path.clone();
+        path.strokeColor = stroke[current];
+      }
+      window.setInterval(changeColors, 1000);
+
+
+      var path = new Path({
+          strokeColor: stroke[current],
+          strokeWidth: 100,
+          strokeCap: 'round'
+      });
+
+      var start = view.center / [9.5, 1];
+      for (var i = 0; i < points; i++)
+          path.add(start + new Point(i * length, 0));
+
+      function onMouseMove(event) {
+          path.firstSegment.point = event.point;
+          for (var i = 0; i < points - 1; i++) {
+              var segment = path.segments[i];
+              var nextSegment = segment.next;
+              var vector = segment.point - nextSegment.point;
+              vector.length = length;
+              nextSegment.point = segment.point - vector;
+          }
+          path.smooth({ type: 'continuous' });
+      }
+
+      function onMouseDown(event) {
+          path.fullySelected = true;
+          path.strokeColor = '#e08285';
+      }
+
+      function onMouseUp(event) {
+          path.fullySelected = false;
+          path.strokeColor = '#e4141b';
+      }
+
+  </script>
+  <canvas id="canvas" resize></canvas>
+  <div class="link-container">
+    <div class="links">
+      <a href="/echo">Echo </a>
+      <a href="/banana-haus">Banana-Haus </a>
+      <a href="/mary-lou">Mary Lou </a>
+      <a href="/paperclip">Paperclip </a>
+      <a href="/aust-shells">Australian Shells </a>
+      <a href="/textbook-otis">Textbook Otis - Otis Armada </a>
+      <a href="/love-bites">Love Bites - abc iView </a>
+      <a href="/shopdata">ShopData </a>
+      <a href="/collageo">Collageo </a>
+      <a href="yellow-collective">Yellow Collective </a>
+      <a href="/thesis">Thesis </a>
+      <a href="/three-of-us">Three Of Us </a>
+      <a href="/keating">Keating + Co </a>
+      <a href="/total-auto">Total Auto </a>
+      <a href="/tictactoe">Tic Tac Toe </a>
+      <a href="/bourke-haus">Bourke House </a>
+    </div>
+  </div>
