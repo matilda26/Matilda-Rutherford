@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+
 require 'pry'
 require_relative 'models/carrierwave-config'
 # require 'active_record'
