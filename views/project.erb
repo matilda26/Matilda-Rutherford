@@ -1,2 +1,108 @@
-<h1><%= @projectName %></h1>
-<p><%= @projectInfo %></p>
+<div id="container"></div>
+<a href="/" class="top-left-anchor">matilda</a>
+<a href="/about" class="bottom-right-anchor">rutherford</a>
+
+<button class="project-info-btn">+</button>
+
+
+<div class="overlay">
+  <div class="overlay-content">
+    <div class="project-top">
+      <h1 class="main-title" style="color:white;"><%= @projectName %></h1>
+      <button class="exit">x</button>
+    </div>
+    <p class="project-copy" style="color:white;"><%= @projectInfo %></p>
+  </div>
+</div>
+
+
+
+<button class="nav-btn">+</button>
+
+
+<div class="nav-overlay">
+  <div class="nav-content">
+    <button class="nav-exit">x</button>
+    <div class="nav-links">
+      <a href="/echo">Echo </a>
+      <a href="/banana-haus">Banana-Haus </a>
+      <a href="/mary-lou">Mary Lou </a>
+      <a href="/paperclip">Paperclip </a>
+      <a href="/aust-shells">Australian Shells </a>
+      <a href="/textbook-otis">Textbook Otis - Otis Armada </a>
+      <a href="/love-bites">Love Bites - abc iView </a>
+      <a href="/shopdata">ShopData </a>
+      <a href="/bourke-haus">Money.com.au </a>
+      <a href="/collageo">Collageo </a>
+      <a href="yellow-collective">Yellow Collective </a>
+      <a href="/thesis">Thesis </a>
+      <a href="/three-of-us">Three Of Us </a>
+      <a href="/keating">Keating + Co </a>
+      <a href="/total-auto">Total Auto </a>
+      <a href="/tictactoe">Tic Tac Toe </a>
+      <a href="/bourke-haus">Bourke House </a>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.rawgit.com/konvajs/konva/2.0.3/konva.min.js"></script>
+
+<script>
+
+    var images = {echo:["https://s3-ap-southeast-2.amazonaws.com/mrutherford/echo/echo-01.jpg", "https://s3-ap-southeast-2.amazonaws.com/mrutherford/echo/echo-02.jpg", "https://s3-ap-southeast-2.amazonaws.com/mrutherford/echo/echo-03.jpg", "https://s3-ap-southeast-2.amazonaws.com/mrutherford/echo/echo-04.jpg", "https://s3-ap-southeast-2.amazonaws.com/mrutherford/echo/echo-05.jpg"]}
+
+var width = window.innerWidth;
+var height = window.innerHeight;
+var stage = new Konva.Stage({
+  container: 'container',
+  width: width,
+  height: height
+});
+var layer = new Konva.Layer();
+stage.add(layer);
+
+
+function createImage(imageSource) {
+
+var darthVaderImg = new Konva.Image({
+  x: countX,
+  y: countY,
+  width: 300,
+  height: 200,
+  draggable: true
+});
+layer.add(darthVaderImg);
+
+var imageObj1 = new Image();
+  imageObj1.onload = function() {
+    darthVaderImg.image(imageObj1);
+    layer.draw();
+  };
+  imageObj1.src = imageSource;
+
+
+  // add cursor styling
+  darthVaderImg.on('mouseover', function() {
+    document.body.style.cursor = 'pointer';
+  });
+  darthVaderImg.on('mouseout', function() {
+    document.body.style.cursor = 'default';
+  });
+
+}
+var countX = 200;
+var countY = 0;
+for (var i = 0; i < images.echo.length; i++) {
+  createImage(images.echo[i], countX, countY)
+  countX += 100;
+  countY += 50;
+}
+
+
+
+
+
+
+
+</script>
