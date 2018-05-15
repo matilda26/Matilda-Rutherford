@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.4.0'
 gem 'sinatra'
 gem 'pry'
 gem 'carrierwave', '0.10.0'
