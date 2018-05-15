@@ -1,8 +1,6 @@
 
 require 'carrierwave'
-# require 'carrierwave/orm/activerecord'
 require 'carrierwave/processing/mini_magick'
-# require 'fog'
 
 CarrierWave.configure do |config|
   # config.fog_provider = 'fog/aws'
