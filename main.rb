@@ -1,8 +1,6 @@
 require 'sinatra'
-
 require 'pry'
 require_relative 'models/carrierwave-config'
-
 require 'carrierwave'
 
 
