@@ -220,38 +220,38 @@
     x = 0,
     y = 0;
 
-  for (var i = 0; i < elements.length; i++) {
-    interact(elements[i]).draggable({
-      snap: {
-        targets: [interact.createSnapGrid({x: 1, y: 1})],
-        range: Infinity,
-        relativePoints: [
-          {
-            x: 0,
-            y: 0
-          }
-        ]
-      },
-      inertia: true,
-      restrict: {
-        restriction: elements[i].parentNode,
-        elementRect: {
-          top: 0,
-          left: 0,
-          bottom: 1,
-          right: 1
-        },
-        endOnly: true
-      }
-    }).on('dragmove', function (event) {
-      var target = event.target,
-        x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-        y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-
-      target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-
-      target.setAttribute('data-x', x);
-      target.setAttribute('data-y', y);
-    });
-  }
+  // for (var i = 0; i < elements.length; i++) {
+  //   interact(elements[i]).draggable({
+  //     snap: {
+  //       targets: [interact.createSnapGrid({x: 1, y: 1})],
+  //       range: Infinity,
+  //       relativePoints: [
+  //         {
+  //           x: 0,
+  //           y: 0
+  //         }
+  //       ]
+  //     },
+  //     inertia: true,
+  //     restrict: {
+  //       restriction: elements[i].parentNode,
+  //       elementRect: {
+  //         top: 0,
+  //         left: 0,
+  //         bottom: 1,
+  //         right: 1
+  //       },
+  //       endOnly: true
+  //     }
+  //   }).on('dragmove', function (event) {
+  //     var target = event.target,
+  //       x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+  //       y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+  //
+  //     target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+  //
+  //     target.setAttribute('data-x', x);
+  //     target.setAttribute('data-y', y);
+  //   });
+  // }
 </script>
