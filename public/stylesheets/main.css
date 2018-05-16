@@ -21,7 +21,7 @@ button:focus {
 
 .project-info-btn, .project-min-btn {
   position: absolute;
-  font-size: 5em;
+  font-size: 6vmin;
   font-weight: 800;
   padding: 0;
   margin: 0;
@@ -71,20 +71,20 @@ a {
 }
 
 .project-hero-block {
-  width: 25vh;
-  height: 25vh;
+  /* width: 14.28vw;
+  height: 30vh; */
   margin: 0;
   padding: 0;
-  margin-right: 1vw;
-  margin-bottom: 1vw;
+  /* margin-right: 1vw; */
+  /* margin-bottom: 1vw; */
   display: inline-block;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
 }
 
 .project-hero-block img {
-  width: 25vh;
-  height: 25vh;
+  /* width: 14.28vw;
+  height: 30vh; */
   object-fit: cover;
   display: inline-block;
   cursor: move;
@@ -142,7 +142,7 @@ a {
 }
 
 .about-me {
-  font-size: 2.5em;
+  font-size: 4vmin;
 }
 
 .about-me-div {
@@ -153,9 +153,43 @@ a {
   padding: 2%;
 }
 .project-min {
-  width: 25vh;
+  width: 4em;
   height: 4em;
 }
 .vis {
   visibility: hidden;
+}
+@media screen and (min-width: 1150px) {
+  .project-hero-block, .project-hero-block img {
+    width: 14.28vw;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .project-hero-block, .project-hero-block img {
+    width: 16.6vw;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 950px) {
+  .project-hero-block, .project-hero-block img {
+    width: 20vw;
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 800px) {
+  .project-hero-block, .project-hero-block img {
+    width: 25vw;
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  .project-hero-block, .project-hero-block img {
+    width: 25vw;
+    height: 20vh;
+  }
+  body {
+    font-size: 8px;
+    overflow: hidden;
+  }
 }
