@@ -4,9 +4,21 @@ var infoBtns = document.querySelectorAll(".project-info-btn");
 infoBtns.forEach(function(button) {
   button.addEventListener('click', function(e) {
     e.target.parentNode.children[0].classList.toggle("project-vis");
+    if (e.target.parentNode.children[0].classList.contains("project-vis")) {
+      e.target.parentNode.children[1].style.display = "block";
+    } else {
+      e.target.parentNode.children[1].style.display = "none";
+    }
     e.target.classList.toggle("btn-rotate");
   })
 })
+
+
+
+
+
+
+
 
 var minBtns = document.querySelectorAll(".project-min-btn");
 minBtns.forEach(function(button) {

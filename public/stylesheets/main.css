@@ -35,17 +35,14 @@ button:focus {
   bottom: -0.2em;
   left: 0.1em;
   transition: 0.2s;
-  color: blue;
+  color: black;
 }
 
 .project-min-btn {
   top: -0.3em;
   right: 0.1em;
   transition: 0.2s;
-  color: red;
-  /* transform: rotate(45deg); */
-  /* border: 2px solid red; */
-  /* font-stretch: ultra-expanded; */
+  color: black;
 }
 
 a {
@@ -73,23 +70,16 @@ a {
 }
 
 .project-hero-block {
-  /* width: 14.28vw;
-  height: 30vh; */
   margin: 0;
   padding: 0;
-  /* color: white; */
-  /* margin-right: 1vw; */
-  /* margin-bottom: 1vw; */
   display: inline-block;
   -webkit-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
 }
 
 .project-hero-block img {
-  /* width: 14.28vw;
-  height: 30vh; */
   object-fit: cover;
-  display: inline-block;
+  display: none;
   cursor: move;
 }
 
@@ -198,4 +188,5 @@ a {
     font-size: 8px;
     overflow: hidden;
   }
+
 }
