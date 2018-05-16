@@ -88,10 +88,9 @@ a {
   height:100%;
   position: absolute;
   left: 0;
-  background-color: beige;
+  background-color: #fcfbe9;
   overflow: scroll;
   cursor: move;
-  /* margin-bottom: 5%; */
 }
 
 .project-text, .project-title, .project-category {
