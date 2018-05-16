@@ -263,19 +263,19 @@
       target.setAttribute('data-x', x);
       target.setAttribute('data-y', y);
     });
-    .ignoreFrom('button');
+    // .ignoreFrom('button');
   }
 
-  // var proDivs = document.querySelectorAll('.project-hero-block');
-  // function noDrag(x) {
-  //   if (x.matches) { // If media query matches
-  //     proDivs.forEach(function (div) {
-  //       div.removeAttribute('id');
-  //     })
-  //   }
-  // }
-  //
-  // var x = window.matchMedia("(max-width: 450px)")
-  // noDrag(x) // Call listener function at run time
-  // x.addListener(noDrag) // Attach listener function on state changes
+  var proDivs = document.querySelectorAll('.project-hero-block');
+  function noDrag(x) {
+    if (x.matches) { // If media query matches
+      proDivs.forEach(function (div) {
+        div.removeAttribute('id');
+      })
+    }
+  }
+
+  var x = window.matchMedia("(max-width: 450px)")
+  noDrag(x) // Call listener function at run time
+  x.addListener(noDrag) // Attach listener function on state changes
 </script>
