@@ -118,7 +118,7 @@
     <div class="project-plus">
       <h1 class="project-title">Paperclip</h1>
       <h5 class="project-category">Product</h5>
-      <p class="project-text">Bent out of a singular piece of metal tubing, The Paperclip chair was the final piece for Advanced Manufacturing at RMIT, 2013. With handcarved pine slats and rubber detailing, The Paperclip was designed for outdoor lounging</p>
+      <p class="project-text">Bent out of a singular piece of metal tubing, The Paperclip chair was the final piece for Advanced Manufacturing at RMIT, 2013. With handcarved pine slats and rubber detailing, The Paperclip was designed for outdoor lounging.</p>
     </div>
     <img src="https://s3-ap-southeast-2.amazonaws.com/mrutherford/01-heros/paperclip-hero.png" alt="">
     <button class="project-info-btn">+</button>
@@ -266,16 +266,16 @@
     .ignoreFrom('button');
   }
 
-  var proDivs = document.querySelectorAll('.project-hero-block');
-  function noDrag(x) {
-    if (x.matches) { // If media query matches
-      proDivs.forEach(function (div) {
-        div.removeAttribute('id');
-      })
-    }
-  }
-
-  var x = window.matchMedia("(max-width: 450px)")
-  noDrag(x) // Call listener function at run time
-  x.addListener(noDrag) // Attach listener function on state changes
+  // var proDivs = document.querySelectorAll('.project-hero-block');
+  // function noDrag(x) {
+  //   if (x.matches) { // If media query matches
+  //     proDivs.forEach(function (div) {
+  //       div.removeAttribute('id');
+  //     })
+  //   }
+  // }
+  //
+  // var x = window.matchMedia("(max-width: 450px)")
+  // noDrag(x) // Call listener function at run time
+  // x.addListener(noDrag) // Attach listener function on state changes
 </script>
