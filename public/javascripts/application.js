@@ -25,8 +25,5 @@ infoBtns.forEach(function(button) {
   button.addEventListener('click', function(e) {
     e.target.parentNode.children[0].classList.toggle("project-vis");
     e.target.classList.toggle("btn-rotate");
-    // button.style.transition = "0.2s";
-    // button.style.transform = "rotate("+ degrees +"deg)";
-    // degrees = degrees + 45;
   })
 })
