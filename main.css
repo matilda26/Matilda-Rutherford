@@ -51,15 +51,12 @@ a {
   text-decoration: none;
 }
 
-.bottom-right-anchor {
-  position: absolute;
-  bottom: 2%;
-  right: 2%;
-  font-size: 12vmin;
+.top-left-anchor {
+  font-size: 10vmin;
   font-weight: 800;
 }
 
-.bottom-right-anchor:hover {
+.top-left-anchor:hover {
   color: black;
 }
 
@@ -137,6 +134,8 @@ a {
 
 .about-me {
   font-size: 4vmin;
+  padding-left: 20vw;
+  text-align: justify;
 }
 .about-me span {
   text-decoration: underline;
