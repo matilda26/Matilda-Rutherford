@@ -135,7 +135,7 @@ a {
 .about-me {
   font-size: 4vmin;
   padding-left: 20vw;
-  text-align: justify;
+  /* text-align: justify; */
 }
 .about-me span {
   text-decoration: underline;
