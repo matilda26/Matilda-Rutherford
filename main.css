@@ -78,7 +78,7 @@ a {
 .project-hero-block img {
   object-fit: cover;
   display: none;
-  cursor: move;
+  /* cursor: move; */
 }
 
 .project-plus {
@@ -88,14 +88,14 @@ a {
   left: 0;
   background-color: #fcfbe9;
   overflow: scroll;
-  cursor: move;
+  /* cursor: move; */
   display:none;
 }
 
 .project-text, .project-title, .project-category {
   position: relative;
   padding: 0 5%;
-  cursor: move;
+  /* cursor: move; */
 }
 
 .project-title {
