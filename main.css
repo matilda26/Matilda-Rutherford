@@ -27,7 +27,6 @@ button:focus {
   margin: 0;
   border: none;
   background-color: rgba(0, 0, 0, 0);
-  /* color: black; */
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -36,6 +35,8 @@ button:focus {
   left: 0.1em;
   transition: 0.2s;
   color: black;
+  display: none;
+  cursor: pointer;
 }
 
 .project-min-btn {
@@ -91,6 +92,7 @@ a {
   background-color: #fcfbe9;
   overflow: scroll;
   cursor: move;
+  display:none;
 }
 
 .project-text, .project-title, .project-category {
@@ -147,23 +149,17 @@ a {
   z-index: -10;
   padding: 2%;
 }
-.project-min {
-  width: 4em;
-  height: 4em;
-}
-.vis {
-  visibility: hidden;
-}
+
 @media screen and (min-width: 1150px) {
   .project-hero-block, .project-hero-block img {
-    width: 16.6vw;
-    height: 30vh;
+    width: 20vw;
+    height: 33.3vh;
   }
 }
 @media screen and (max-width: 1150px) {
   .project-hero-block, .project-hero-block img {
-    width: 16.6vw;
-    height: 30vh;
+    width: 20vw;
+    height: 33.3vh;
   }
 }
 @media screen and (max-width: 950px) {
@@ -180,7 +176,7 @@ a {
 }
 @media screen and (max-width: 450px) {
   .project-hero-block, .project-hero-block img {
-    width: 25vw;
+    width: 33.3vw;
     height: 20vh;
   }
   body {
