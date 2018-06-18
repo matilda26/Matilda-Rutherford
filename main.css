@@ -2,17 +2,14 @@
   box-sizing: border-box;
 }
 
-/* font-family: 'Open Sans', sans-serif;
-font-family: 'Roboto Mono', monospace; */
-
 body {
-  /* background-color: white; */
   margin: 0;
   height: 100vh;
   width: 100vw;
   padding: 0;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(0deg, #a1c4fd 0%, #c2e9fb 100%);
 }
 
 button:focus {
@@ -52,7 +49,7 @@ a {
 }
 
 .top-left-anchor {
-  font-size: 10vmin;
+  font-size: 3em;
   font-weight: 800;
 }
 
@@ -83,13 +80,13 @@ a {
 
 .project-plus {
   width: 100%;
-  height:100%;
+  height: 100%;
   position: absolute;
   left: 0;
   background-color: #fcfbe9;
   overflow: scroll;
   /* cursor: move; */
-  display:none;
+  display: none;
 }
 
 .project-text, .project-title, .project-category {
@@ -133,10 +130,16 @@ a {
 }
 
 .about-me {
-  font-size: 4vmin;
-  padding-left: 20vw;
+  position: absolute;
+  top: 0;
+  right: 2%;
+  font-size: 1.5em;
+  text-align: right;
+  /* padding: 2%; */
+  width: 50%;
   /* text-align: justify; */
 }
+
 .about-me span {
   text-decoration: underline;
 }
@@ -147,6 +150,11 @@ a {
   left: 0;
   z-index: -10;
   padding: 2%;
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/Web_Illustration2-01.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (min-width: 1150px) {
@@ -155,32 +163,42 @@ a {
     height: 33.3vh;
   }
 }
+
 @media screen and (max-width: 1150px) {
   .project-hero-block, .project-hero-block img {
     width: 20vw;
     height: 33.3vh;
   }
+  
 }
+
 @media screen and (max-width: 950px) {
   .project-hero-block, .project-hero-block img {
     width: 20vw;
     height: 30vh;
   }
 }
+
 @media screen and (max-width: 800px) {
   .project-hero-block, .project-hero-block img {
     width: 25vw;
     height: 25vh;
   }
+  .about-me-div {
+    background-position: center;
+  }
 }
+
 @media screen and (max-width: 450px) {
   .project-hero-block, .project-hero-block img {
     width: 33.3vw;
     height: 20vh;
   }
   body {
-    font-size: 8px;
+    font-size: 10px;
     overflow: hidden;
   }
-
+  .about-me-div {
+    background-position: right bottom;
+  }
 }
