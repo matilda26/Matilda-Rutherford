@@ -150,12 +150,54 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 p {
   font-size: 1.5em;
   text-align: right;
 }
+
 p a {
   text-decoration: underline;
+}
+
+.cloud-animation {
+  animation: cloud linear 14s infinite;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-20vw);
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+}
+
+.clouds {
+  width: 100vw;
+  height: 20%;
+}
+
+#large-cloud {
+  width: 200px;
+  position: absolute;
+  top: 5%;
+  animation-duration: 16s;
+  animation-delay: -10s;
+}
+
+#small-cloud {
+  width: 100px;
+  position: absolute;
+  top: 8%;
+  animation-duration: 14s;
+  animation-delay: -6s;
+}
+
+#medium-cloud {
+  width: 250px;
+  position: absolute;
+  top: 17%;
 }
 
 @media screen and (min-width: 1150px) {
@@ -170,7 +212,6 @@ p a {
     width: 20vw;
     height: 33.3vh;
   }
-
 }
 
 @media screen and (max-width: 950px) {
